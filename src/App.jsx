@@ -3,11 +3,9 @@ import ContactList from "./components/ContactList";
 import "./App.css";
 
 function App() {
-  return (
-    <>
-      <ContactList />
-    </>
-  );
+  const [selectedContactId, setSelectedContactId] = useState(null);
+
+  return <>{selectedContactId ? <div>Selected</div> : <ContactList />}</>;
 }
 
 export default App;
